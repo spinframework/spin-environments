@@ -1,5 +1,3 @@
-**FOR TESTING ONLY AT THIS POINT** - see https://github.com/spinframework/spin/issues/3504
-
 # Spin target environments
 
 This repository contains target environment definitions for Spin. Each target
@@ -18,3 +16,18 @@ change in patch releases.
 
 (The `<environment-name>` directory is technically redundant but just makes the repo
 a bit easier to navigate!)
+
+## Schema
+
+* `default` (optional)
+  *  `worlds` - array of worlds to accept when an unknown triggers is in play
+* `triggers`
+  * `<trigger-type>`
+    * `worlds` - array of worlds to accept when this trigger is in play
+    * `capabilities` - lockfile capabilities that the host provides when this trigger is in play
+* `metadata` (all optional)
+  * `templates` - Spin app templates recommended for developing for this environment
+    * `url` - the git repo containing templates for this environment
+    * `tag` - optional tag, if present then use this rev of the templates
+  * `plugins` - plugins recommended to install for working with this environment
+ 
