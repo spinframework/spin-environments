@@ -9,10 +9,12 @@ Environment definitions:
 
 * are TOML files
 * live under a `<environment-name>` directory
-* are named `<environment-name>@<version>.toml`
+* are named `<environment-name>[@<version>].toml`
 
 Versions should include _minor version only_ because WITs should not
-change in patch releases.
+change in patch releases. The version may be omitted if your environment
+doesn't have versions (e.g. a hosted service which updates periodically
+and anything which runs on it will see its latest world).
 
 (The `<environment-name>` directory is technically redundant but just makes the repo
 a bit easier to navigate!)
