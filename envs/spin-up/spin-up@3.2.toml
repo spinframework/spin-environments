@@ -5,3 +5,6 @@ default = { worlds = ["spin:up/platform@3.2.0"] }
 [triggers.http]
 worlds = ["spin:up/http-trigger@3.2.0"]
 capabilities = ["local_service_chaining"]
+
+[metadata]
+templates = { url = "https://github.com/spinframework/spin", tag = "spin/templates/v3.2" }
