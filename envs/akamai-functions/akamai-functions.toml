@@ -11,6 +11,7 @@ worlds = [
 ]
 
 [metadata]
+plugins = ["aka"]
 
 [metadata.templates]
 url = "https://github.com/akamai-developers/akamai-functions-spin-templates"
