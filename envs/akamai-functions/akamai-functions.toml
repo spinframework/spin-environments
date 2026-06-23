@@ -1,4 +1,4 @@
-default = { worlds = ["akamai:functions/platform@1.0.0"] }
+default = { worlds = [{ reference = "ghcr.io/fermyon/akamai-functions/wit:1.0.0", world = "akamai:functions/platform@1.0.0" }] }
 
 [triggers]
 
