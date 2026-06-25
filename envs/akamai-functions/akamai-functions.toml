@@ -9,6 +9,7 @@ worlds = [
   {reference = "ghcr.io/fermyon/akamai-functions/wit:1.0.0", world = "akamai:functions/http-trigger-rc20231110@1.0.0"},
   {reference = "ghcr.io/fermyon/akamai-functions/wit:1.0.0", world = "akamai:functions/http-trigger-legacy@1.0.0"}
 ]
+capabilities = ["local_service_chaining"]
 
 [metadata]
 plugins = ["aka"]
