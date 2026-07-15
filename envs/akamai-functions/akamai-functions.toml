@@ -1,9 +1,14 @@
-default = { worlds = [{ reference = "ghcr.io/fermyon/akamai-functions/wit:1.0.0", world = "akamai:functions/platform@1.0.0" }] }
+default = { worlds = [
+  { reference = "ghcr.io/fermyon/akamai-functions/wit:1.0.0", world = "akamai:functions/platform@1.0.0" },
+  { reference = "ghcr.io/fermyon/akamai-functions/wit:1.1.0", world = "akamai:functions/platform-async@1.1.0" }
+] }
 
 [triggers]
 
 [triggers.http]
 worlds = [
+  {reference = "ghcr.io/fermyon/akamai-functions/wit:1.1.0", world = "akamai:functions/http-trigger-async@1.1.0"},
+  {reference = "ghcr.io/fermyon/akamai-functions/wit:1.1.0", world = "akamai:functions/http-trigger-async-rc20260315@1.1.0"},
   {reference = "ghcr.io/fermyon/akamai-functions/wit:1.0.0", world = "akamai:functions/http-trigger@1.0.0"},
   {reference = "ghcr.io/fermyon/akamai-functions/wit:1.0.0", world = "akamai:functions/http-trigger-rc20231018@1.0.0"},
   {reference = "ghcr.io/fermyon/akamai-functions/wit:1.0.0", world = "akamai:functions/http-trigger-rc20231110@1.0.0"},
@@ -16,4 +21,4 @@ plugins = ["aka"]
 
 [metadata.templates]
 url = "https://github.com/akamai-developers/akamai-functions-spin-templates"
-tag = "v1.0.0"
+tag = "v1.1.0"
