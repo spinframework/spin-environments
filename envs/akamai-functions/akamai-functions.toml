@@ -3,6 +3,11 @@ default = { worlds = [
   { reference = "ghcr.io/fermyon/akamai-functions/wit:1.1.0", world = "akamai:functions/platform-async@1.1.0" }
 ] }
 
+[configuration]
+key_value_stores = ["default"]
+sqlite_databases = []
+ai_models = []
+
 [triggers]
 
 [triggers.http]
