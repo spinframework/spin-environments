@@ -28,4 +28,4 @@ plugins = ["aka"]
 
 [metadata.templates]
 url = "https://github.com/akamai-developers/akamai-functions-spin-templates"
-tag = "v1.1.0"
+tag = "v1.2.0"
