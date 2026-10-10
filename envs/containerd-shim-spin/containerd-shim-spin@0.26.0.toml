@@ -1,0 +1,45 @@
+default = { worlds = [
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/platform@0.26.0" }
+] }
+
+[triggers]
+
+[triggers.http]
+worlds = [
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/http-trigger-async@0.26.0" },
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/http-trigger-async-rc20260315@0.26.0" },
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/http-trigger@0.26.0" },
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/http-trigger-rc20231018@0.26.0" },
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/http-trigger-rc20231110@0.26.0" },
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/http-trigger-legacy@0.26.0" }
+]
+capabilities = ["local_service_chaining", "middleware"]
+
+[triggers.redis]
+worlds = [
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/redis-trigger@0.26.0" },
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/redis-trigger-legacy@0.26.0" }
+]
+
+[triggers.mqtt]
+worlds = [
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/mqtt-trigger@0.26.0" },
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/mqtt-trigger-legacy@0.26.0" }
+]
+
+[triggers.sqs]
+worlds = [
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/sqs-trigger@0.26.0" }
+]
+
+[triggers.command]
+worlds = [
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/command-trigger-async@0.26.0" },
+  { reference = "ghcr.io/spinframework/containerd-shim-spin/wit:0.26.0", world = "spinkube:containerd-shim-spin/command-trigger@0.26.0" }
+]
+
+[metadata]
+plugins = ["kube"]
+
+# TODO: host templates for the shim. For now, users should specify `targets = ["containerd-shim-spin"]` in
+# their spin.toml files and the target will be evaluated at build time.
